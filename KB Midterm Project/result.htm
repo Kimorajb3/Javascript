@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body onload="myFunc()">
+   <header>
+      <h1>
+         Information from Form
+      </h1>
+   </header>
+	<h2>Your form has been submitted</h2><br>
+      <p>
+		Name: <span id="data"></span>
+		Address: <span id="data1"></span>
+		City: <span id="data2"></span>
+		State: <span id="data3"></span>
+		Zip: <span id="data4"></span>
+		Phone: <span id="data5"></span>
+		E-mail: <span id="data6"></span>
+		Age: <span id="data7"></span>
+		T-Shirt Size: <span id="data8"></span>
+		<br><br>
+		</p>
+		<p id="demo">
+		<span id ="dat"></span>, we welcome you to the Frostbite 5K held on December 9th, 2011. 
+		You total cost for entering this race is $<span id="dt"></span>. If you have any questions about your registration, 
+		please contact us at racedirector@frostbite5k.com.
+	</p>
+
+</body>
+<script>
+function myFunc(){
+var age = localStorage.getItem("txtValue7");
+var tshirt = localStorage.getItem("txtValue8");
+var price = 20;
+var price2 = 15;
+var sum;
+
+if (age < 60){
+	if (tshirt=== "small"||tshirt==="medium"||tshirt==="large"){
+		sum = price;
+	}
+	else {
+	sum = price + 2;
+	}
+	}
+	
+	if (age >= 60){
+	if (tshirt=== "small"||tshirt==="medium"||tshirt==="large"){
+		sum = price2;
+	}
+	else {
+	sum = price2 + 2;
+	}
+	}
+		
+	
+
+
+document.getElementById("dt").innerHTML = sum;
+}
+ 
+</script>
+<script>
+document.getElementById("dat").innerHTML=localStorage.getItem("txtValue");
+document.getElementById("data").innerHTML=localStorage.getItem("txtValue");
+document.getElementById("data1").innerHTML=localStorage.getItem("txtValue1");
+document.getElementById("data2").innerHTML=localStorage.getItem("txtValue2");
+document.getElementById("data3").innerHTML=localStorage.getItem("txtValue3");
+document.getElementById("data4").innerHTML=localStorage.getItem("txtValue4");
+document.getElementById("data5").innerHTML=localStorage.getItem("txtValue5");
+document.getElementById("data6").innerHTML=localStorage.getItem("txtValue6");
+document.getElementById("data7").innerHTML=localStorage.getItem("txtValue7");
+document.getElementById("data8").innerHTML=localStorage.getItem("txtValue8");
+</script>
+</html>

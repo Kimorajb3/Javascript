@@ -1,0 +1,36 @@
+<head>
+   <!--
+      JavaScript 6th Edition
+      Chapter 10
+      Hands-on Project 10-3
+
+      Author: Kimora Bailey
+      Date: 11/3/2021  
+
+      Filename: index.htm
+   -->
+    <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Lab 10-3</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" href="styles.css" />
+  <script src="script.js"></script>
+  </head>
+  <body>
+  <header>
+      <h1>
+         Lab 10-3
+      </h1>
+   </header>
+   <article>
+     
+    <div id="map"></div>
+</article>
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmAmeeQLJf06ZbTG1XnEa95f_-mhPwqQM&callback=initMap&v=weekly"
+      async
+    ></script>
+	
+  </body>
+</html>
